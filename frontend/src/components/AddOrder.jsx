@@ -20,7 +20,7 @@ const AddTask = ({ todos, setTodos }) => {
     }
 
     try {
-      const response = await axios.post('http://127.0.0.1:8000/api/todo/', { body: task, completed: false });
+      const response = await axios.post('http://ec2-174-129-60-54.compute-1.amazonaws.com:8000/api/todo/', { body: task, completed: false });
       setTodos([...todos, response.data]);
       setTask('');
       setError('');

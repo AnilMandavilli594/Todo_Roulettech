@@ -21,7 +21,7 @@ const Table = ({ todos, isLoading, setTodos }) => {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://127.0.0.1:8000/api/todo/${id}/`);
+      await axios.delete(`http://ec2-174-129-60-54.compute-1.amazonaws.com:8000/api/todo/${id}/`);
       const newList = todos.filter(todo => todo.id !== id);
       setTodos(newList);
     } catch (error) {
@@ -31,7 +31,7 @@ const Table = ({ todos, isLoading, setTodos }) => {
 
   const handleEdit = async (id, value) => {
     try {
-      const response = await axios.patch(`http://127.0.0.1:8000/api/todo/${id}/`, value);
+      const response = await axios.patch(`http://ec2-174-129-60-54.compute-1.amazonaws.com:8000/api/todo/${id}/`, value);
       const newTodos = todos.map(todo => todo.id === id ? response.data : todo);
       setTodos(newTodos);
     } catch (error) {

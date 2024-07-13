@@ -19,7 +19,7 @@ const TodoForm = ({ setTodos, fetchData }) => {
 
     const postTodo = async () => {
         try {
-            await axios.post(`http://127.0.0.1:8000/api/todo/`, newTodo)
+            await axios.post(`http://ec2-174-129-60-54.compute-1.amazonaws.com:8000/api/todo/`, newTodo)
             setNewTodo({ 'body': '' })
             setTodos(prevTodos => [...prevTodos, newTodo])
             fetchData()

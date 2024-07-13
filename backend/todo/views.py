@@ -54,4 +54,15 @@ class TodoDetail(APIView):
         todo = self.get_object(pk)
         todo.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
+    
+
+class TodoSearch(APIView):
+
+    def get(self, request):
+        query = request.query_params.get('q', None)
+        if query:
+            todos = models.Todo.objects.filter(body__icontains=query)
+            serializer = serializers.TodoSerializer(todos, many=True)
+            return Response(serializer.data)
+        return Response({"error": "Please provide a search query"}, status=status.HTTP_400_BAD_REQUEST)
         

@@ -6,5 +6,6 @@ from rest_framework import routers
 urlpatterns = [
     path('todo/', TodoList.as_view(), name='todo-list'),
     path('todo/<int:pk>/', TodoDetail.as_view(), name='todo-detail'),
+    path('todo/search/', TodoSearch.as_view(), name='todo-search'),
 ]
 
