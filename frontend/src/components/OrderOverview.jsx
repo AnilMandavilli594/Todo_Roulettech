@@ -12,12 +12,12 @@ const TodoOverview = ({ todos }) => {
 
   return (
     <div className="mb-4">
-      <h2 className="text-xl text-black font-bold mb-2">Todo Overview</h2>
+      <h2 className="text-xl text-black font-bold mb-2">Order Overview</h2>
       <div className="flex justify-between mb-2">
         <div>
-          <p className='text-black'>Total Tasks: {totalTasks}</p>
-          <p className='text-black'>Incomplete Tasks: {incompleteTasks}</p>
-          <p className='text-black'>Tasks Done: {tasksDone}</p>
+          <p className='text-black'>Total Orders: {totalTasks}</p>
+          <p className='text-black'>Incomplete Orders: {incompleteTasks}</p>
+          <p className='text-black'>Orders Done: {tasksDone}</p>
         </div>
       </div>
     </div>

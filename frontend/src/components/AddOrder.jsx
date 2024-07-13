@@ -34,19 +34,17 @@ const AddTask = ({ todos, setTodos }) => {
   };
 
   return (
-    <div>
-      <div className="flex mb-4">
-        <input
-          type="text"
-          value={task}
-          onChange={(e) => setTask(e.target.value)}
-          className="p-2 border border-gray-300 rounded-md flex-1 mr-2"
-          placeholder="Add new task"
-        />
-        <button onClick={handleAddTask} className="p-2 bg-blue-500 text-white rounded-md">
-          Add Todo
-        </button>
-      </div>
+    <div className="flex ">
+      <input
+        type="text"
+        value={task}
+        onChange={(e) => setTask(e.target.value)}
+        className="p-2 border border-gray-300 rounded-md flex-1 mr-2"
+        placeholder="Add new order"
+      />
+      <button onClick={handleAddTask} className="p-2 bg-blue-500 text-white rounded-md">
+        Add Order
+      </button>
       {error && (
         <Modal
           id="error-modal"

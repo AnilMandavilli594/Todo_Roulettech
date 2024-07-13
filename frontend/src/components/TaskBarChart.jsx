@@ -33,7 +33,7 @@ const TaskBarChart = ({ todos }) => {
         ticks: {
           stepSize: 1,
         },
-        max: Math.max(doneTasks, incompleteTasks) + 1,
+        max: todos.length,
       },
     },
   };

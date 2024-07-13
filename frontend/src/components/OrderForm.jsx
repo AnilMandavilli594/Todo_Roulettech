@@ -32,7 +32,7 @@ const TodoForm = ({ setTodos, fetchData }) => {
         <>
             <input
                 type="text"
-                placeholder="Add Todo"
+                placeholder="Add Order"
                 value={newTodo.body}
                 className="w-full max-w-xs px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:border-blue-500"
                 onChange={handleChange}
